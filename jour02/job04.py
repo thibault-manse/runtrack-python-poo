@@ -4,7 +4,7 @@ class Student:
         self.__prenom = prenom
         self.__numeroEtudiant = numero
         self.__nombreCredit = 0
-        self.__level = Student._student_eval(self)
+        self.__level = Student.__student_eval(self)
 
     def add_credits(self):
         while True:
@@ -17,13 +17,13 @@ class Student:
                 print("Rentré un nombre positif supérieur à 0 s'il vous plait")
             else:
                 self.__nombreCredit = self.__nombreCredit + ajout
-                self.__level = Student._student_eval(self)
+                self.__level = Student.__student_eval(self)
                 break
 
     def get_credit(self):
         return self.__nombreCredit
     
-    def _student_eval(self):
+    def __student_eval(self):
         if self.__nombreCredit >= 90:
             return "Excellent"
         elif self.__nombreCredit >= 80 and self.__nombreCredit < 90:
