@@ -25,11 +25,11 @@ class Voiture():
         return voiture
     
     def demarrer(self):
-        if Voiture._verifier_plein(self) > 5:
+        if Voiture.__verifier_plein(self) > 5:
             self.__en_marche = True
 
     def arreter(self):
         self.__en_marche = False
 
-    def _verifier_plein(self):
+    def __verifier_plein(self):
         return self.__réservoir
